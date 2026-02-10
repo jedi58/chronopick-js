@@ -16,6 +16,7 @@ export default class ChronoPick {
       minDate: options.minDate || null,
       maxDate: options.maxDate || null,
       locale: options.locale || navigator.language,
+      materialIcons: options.materialIcons || false,
       showTodayButton: options.showTodayButton ?? true,
       onChange: options.onChange || (() => {})
     };
@@ -71,7 +72,11 @@ export default class ChronoPick {
     if (this.options.showTodayButton) {
       const todayBtn = document.createElement('button');
       todayBtn.className = 'datepicker-today-btn';
-      todayBtn.innerHTML = `<span class="material-icons">today</span> Today`;
+      if (this.materialIcons) {
+        todayBtn.innerHTML = `<span class="material-icons">today</span> Today`;
+      } else {
+        todayBtn.textContent = 'Today';
+      }
       todayBtn.onclick = () => this.selectDate(new Date(), true);
       this.picker.appendChild(todayBtn);
     }
@@ -80,13 +85,18 @@ export default class ChronoPick {
     this.header.className = 'datepicker-header';
 
     this.prevBtn = document.createElement('button');
-    this.prevBtn.innerHTML = `<span class="material-icons">chevron_left</span>`;
     this.prevBtn.setAttribute('aria-label', 'Previous month');
-
     this.nextBtn = document.createElement('button');
-    this.nextBtn.innerHTML = `<span class="material-icons">chevron_right</span>`;
     this.nextBtn.setAttribute('aria-label', 'Next month');
 
+    if (this.materialIcons) {
+      this.nextBtn.innerHTML = `<span class="material-icons">chevron_right</span>`;
+      this.prevBtn.innerHTML = `<span class="material-icons">chevron_left</span>`;
+    } else {
+      this.nextBtn.textContent = '>';
+      this.prevBtn.textContent = '<';
+    }
+    
     this.monthLabel = document.createElement('button');
     this.monthLabel.className = 'datepicker-month-label';
     this.monthLabel.onclick = () => this.toggleYearPanel();
@@ -271,6 +281,5 @@ export default class ChronoPick {
 
   hide() {
     this.picker.style.display = 'none';
-    this.input.focus();
   }
 }
