@@ -1,0 +1,80 @@
+@media (prefers-color-scheme: dark) {
+  .datepicker-popup {
+    background: #1e1e1e;
+    border-color: #333333;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+    color: #e0e0e0;
+  }
+
+  .datepicker-header button {
+    color: #e0e0e0;
+  }
+
+  .datepicker-header button:hover {
+    background: #2a2a2a;
+  }
+
+  .datepicker-month-label {
+    color: #ffffff;
+  }
+
+  .datepicker-month-label:hover {
+    background: #2a2a2a;
+  }
+
+  .datepicker-calendar th {
+    color: #b0b0b0;
+  }
+
+  .datepicker-calendar td {
+    color: #e0e0e0;
+  }
+
+  .datepicker-calendar td:hover {
+    background: #2a2a2a;
+  }
+
+  .datepicker-calendar td.selected {
+    background: #90caf9;
+    color: #000000;
+  }
+
+  .datepicker-calendar td.today:not(.selected) {
+    border-color: #90caf9;
+    color: #90caf9;
+  }
+
+  .datepicker-year-panel button {
+    background: #2a2a2a;
+    color: #e0e0e0;
+  }
+
+  .datepicker-year-panel button:hover {
+    background: #333333;
+  }
+
+  .datepicker-year-panel button.selected {
+    background: #90caf9;
+    color: #000000;
+  }
+
+  .datepicker-today-btn {
+    color: #90caf9;
+  }
+
+  .datepicker-today-btn:hover {
+    background: #2a2a2a;
+  }
+
+  .datepicker-time-container input {
+    background: #121212;
+    border-color: #444444;
+    color: #ffffff;
+  }
+
+  .datepicker-popup button:focus,
+  .datepicker-popup td:focus,
+  .datepicker-popup input:focus {
+    outline-color: #90caf9;
+  }
+}
