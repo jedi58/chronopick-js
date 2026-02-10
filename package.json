@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "A lightweight, accessible, date & time picker in vanilla JavaScript with support for Material icons",
   "type": "module",
-  "main": "src/Chronopick-DateTime-Picker.js",
+  "main": "src/chronopick-datetime-picker.js",
   "exports": {
-    ".": "./src/Chronopick-DateTime-Picker.js"
+    ".": "./src/chronopick-datetime-picker.js"
   },
   "scripts": {
     "test": "vitest"

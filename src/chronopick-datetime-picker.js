@@ -33,10 +33,6 @@ export default class ChronoPick {
     this.addEvents();
   }
 
-  /* -------------------------
-     Parsing / formatting
-  ------------------------- */
-
   parseInputDate() {
     if (!this.input.value) return null;
 
@@ -64,10 +60,6 @@ export default class ChronoPick {
 
     return out;
   }
-
-  /* -------------------------
-     Creation
-  ------------------------- */
 
   createPicker() {
     this.picker = document.createElement('div');
@@ -149,10 +141,6 @@ export default class ChronoPick {
     return i;
   }
 
-  /* -------------------------
-     Rendering
-  ------------------------- */
-
   renderCalendar() {
     this.calendarContainer.innerHTML = '';
     this.monthLabel.textContent =
@@ -216,10 +204,6 @@ export default class ChronoPick {
     }
   }
 
-  /* -------------------------
-     Interaction
-  ------------------------- */
-
   toggleYearPanel() {
     this.yearPanelVisible = !this.yearPanelVisible;
     if (this.yearPanelVisible) {
@@ -246,10 +230,6 @@ export default class ChronoPick {
     this.options.onChange(this.input.value);
     this.renderCalendar();
   }
-
-  /* -------------------------
-     Events
-  ------------------------- */
 
   addEvents() {
     const position = () => {
