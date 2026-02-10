@@ -1,0 +1,26 @@
+{
+  "name": "chronopick-js",
+  "version": "1.0.0",
+  "description": "A lightweight, accessible, date & time picker in vanilla JavaScript with support for Material icons",
+  "type": "module",
+  "main": "src/DatePicker.js",
+  "exports": {
+    ".": "./src/DatePicker.js"
+  },
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [
+    "datepicker",
+    "material",
+    "accessible",
+    "vanilla-js",
+    "wcag",
+    "calendar"
+  ],
+  "author": "David G. Paul",
+  "license": "MIT",
+  "devDependencies": {
+    "vitest": "^1.5.0"
+  }
+}
