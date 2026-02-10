@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ChronoPick DateTimePicker Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../src/styles.css">
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      padding: 2rem;
+      background: #fafafa;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+
+    input {
+      padding: 0.5rem;
+      width: 220px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ChronoPick DateTimePicker</h1>
+
+  <label>
+    Date only
+    <input id="dateOnly" placeholder="dd/mm/yyyy">
+  </label>
+
+  <label>
+    Date & time
+    <input id="dateTime" placeholder="dd/mm/yyyy HH:mm">
+  </label>
+
+  <script type="module">
+    import ChronoPick from '../src/Chronopick-DateTime-Picker.js';
+
+    new ChronoPick('#dateOnly', {
+      format: 'dd/mm/yyyy'
+    });
+
+    new ChronoPick('#dateTime', {
+      format: 'dd/mm/yyyy HH:mm',
+      showTodayButton: true
+    });
+  </script>
+</body>
+</html>
